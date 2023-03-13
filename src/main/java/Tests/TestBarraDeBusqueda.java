@@ -9,9 +9,6 @@ public class TestBarraDeBusqueda {
 
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\danfa\\Desktop\\TestFuncionalLidl\\TestFuncionalLidl\\src\\main\\resources\\driver\\chromedriver.exe");
 
-        //Inicializamos browser
-        WebDriver webDriver = new ChromeDriver();
-
         // Creamos la nueva instancia
         WebDriver driver = new ChromeDriver();
 

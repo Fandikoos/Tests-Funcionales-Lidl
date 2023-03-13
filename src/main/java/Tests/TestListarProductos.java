@@ -10,9 +10,6 @@ public class TestListarProductos {
 
         //Este test consistira en listar las panificadoras que se venden en Lidl
 
-        //Inicializamos browser
-        WebDriver webDriver = new ChromeDriver();
-
         // Creamos la nueva instancia
         WebDriver driver = new ChromeDriver();
 
