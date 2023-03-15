@@ -1,11 +1,18 @@
-package Tests;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
 
 public class TestListarProductos {
-    public static void main(String[] args) {
+
+    @Test
+    public void listarProductos(){
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\danfa\\Desktop\\TestFuncionalLidl\\TestFuncionalLidl\\src\\main\\resources\\driver\\chromedriver.exe");
 
         //Este test consistira en listar las panificadoras que se venden en Lidl
@@ -17,13 +24,16 @@ public class TestListarProductos {
         driver.get("https://www.lidl.es/es/panificadoras/c6229");
 
         //Aceptar las cookies
-        driver.findElement(By.className("cookie-alert-extended-button")).sendKeys("cookie-alert-extended-button"+ Keys.ENTER);
+        WebElement element = driver.findElement(By.className("cookie-alert-extended-button"));
 
-        // Esperamos a que cargue la pagina y cargamos una excepción por si surgiera algún error
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        //Inicializamos un timeout a traves del wait de selenium
+        WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOf(element));
+
+        element.sendKeys("cookie-alert-extended-button"+ Keys.ENTER);
+
+        driver.quit();
     }
+
+
 }
