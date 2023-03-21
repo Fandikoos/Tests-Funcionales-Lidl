@@ -5,6 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/*
+Con el patrón Page Object buscamos simplificar la manera de realizar los test, separamos la lógica
+de la página web de la lógica del test de Slenium. Así, tenemos el codigo mas organizadoy hace que sea
+más fácil de mantener
+ */
+
 public class PageObjectLidl {
     private WebDriver driver;
 
