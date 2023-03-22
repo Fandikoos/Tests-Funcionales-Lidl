@@ -17,7 +17,9 @@ public class TestCarritoCompra {
 
         WebDriver driver = new EdgeDriver();
 
-        driver.get("https://www.lidl.es");
+        String url = "https://www.lidl.es";
+
+        driver.get(url);
 
         driver.findElement(By.className("cookie-alert-extended-button")).sendKeys("cookie-alert-extended-button" + Keys.ENTER);
 

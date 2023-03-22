@@ -19,8 +19,10 @@ public class TestListarProductos {
 
         WebDriver driver = new EdgeDriver();
 
+        String url = "https://www.lidl.es/es/panificadoras/c6229";
+
         // Navegamos a la pagina de lidl
-        driver.get("https://www.lidl.es/es/panificadoras/c6229");
+        driver.get(url);
 
         //Aceptar las cookies
         WebElement element = driver.findElement(By.className("cookie-alert-extended-button"));
@@ -31,6 +33,4 @@ public class TestListarProductos {
 
         element.sendKeys("cookie-alert-extended-button"+ Keys.ENTER);
     }
-
-
 }

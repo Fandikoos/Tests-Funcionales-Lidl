@@ -17,8 +17,10 @@ public class TestBarraDeBusqueda {
 
         WebDriver driver = new EdgeDriver();
 
+        String url = "https://www.lidl.es";
+
         // Navegamos a la pagina de lidl
-        driver.get("https://www.lidl.es");
+        driver.get(url);
 
         //Aceptar las cookies
         driver.findElement(By.className("cookie-alert-extended-button")).sendKeys("cookie-alert-extended-button"+ Keys.ENTER);

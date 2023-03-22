@@ -13,7 +13,9 @@ public class TestPatronPageObject {
 
         WebDriver driver = new EdgeDriver();
 
-        driver.get("https://www.lidl.es/es/panificadoras/c6229");
+        String url = "https://www.lidl.es/es/panificadoras/c6229";
+
+        driver.get(url);
 
         PageObjectLidl pageObject = new PageObjectLidl(driver);
         pageObject.listProduct();
